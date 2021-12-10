@@ -11,18 +11,9 @@ urlpatterns = [
     path('type/Water', views.type_Water),
     path('<int:sign_zodiac>/', views.get_info_about_sign_zodiac_by_number),
     path('<str:sign_zodiac>/', views.get_info_about_sign_zodiac, name='horoscope-name'),
-    # path('<type_zodiac>/', views.get_info_about_type_zodiac, name='horoscope-type'),
+    path('<int:day>/<int:month>', views.get_sign_zodiac),
 
 
 
-
-
-
-
-    # path('skorpio/', views.skorpio),
-    # path('virgo/', views.virgo),
-    # path('aries/', views.aries),
-    # path('sagittarius/', views.sagittarius),
-    # path('taurus/', views.taurus),
 
 ]
