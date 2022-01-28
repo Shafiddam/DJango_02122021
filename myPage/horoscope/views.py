@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
 
 zodiac_dict = {
     "Овен": "Овен - первый знак зодиака, планета Марс (с 21 марта по 20 апреля)", #0 Fire
@@ -35,7 +36,7 @@ def index(request): #ГОРОСКОП - ГЛАВНАЯ СТРАНИЦА С МЕ�
 
 
 def type(request):  #ВЕРНУТЬ в состояние просто type!
-    type_list = ["Fire", "Earth", "Air", "Water"]
+    type_list = ["Огонь", "Земля", "Воздух", "Вода"]
     li_urls = ''
     for x in type_list:
         li_urls += f'<li> <a href= {x}> {x} </a> </li>'
@@ -46,10 +47,6 @@ def type(request):  #ВЕРНУТЬ в состояние просто type!
         """
     return HttpResponse(response)
 
-
-# def type(request):
-#     fire = list(zodiac_dict)[0:12:4]
-#     return HttpResponse(fire )
 
 
 def type_Fire(request):
@@ -125,14 +122,6 @@ def type_Fire(request):
     return HttpResponse(response)
 '''
 
-# def type_Fire(request):
-#     # zodiacs = zodiac_dict # преобразуем словарь в список
-#     # for x in range(0, len(zodiacs), 4):
-#     # for x in index(zodiacs):
-#     return HttpResponse(zodiac_dict)
-
-
-
 def get_info_about_type_zodiac(request, type_zodiac):
     description = zodiac_dict.get(sign_zodiac, None)
     if description:
@@ -157,29 +146,33 @@ def get_info_about_sign_zodiac(request, sign_zodiac: str):
     else:
         return HttpResponseNotFound(f'Нет такого знака {sign_zodiac} ')
 
+
 def get_sign_zodiac(request, day: int, month: int):
     zodiacs = list(zodiac_dict)
-    if month == 1 and day <= 19 or month == 12 and day >= 22:
-        return HttpResponse(zodiacs[9])
-    if month == 2 and day <= 18 or month == 1 and day >= 20:
-        return HttpResponse(zodiacs[10])
-    if month == 3 and day <= 20 or month == 2 and day >= 19:
-        return HttpResponse(zodiacs[11])
-    if month == 4 and day <= 19 or month == 3 and day >= 21:
-        return HttpResponse(zodiacs[0])
-    if month == 5 and day <= 20 or month == 4 and day >= 20:
-        return HttpResponse(zodiacs[1])
-    if month == 6 and day <= 20 or month == 5 and day >= 21:
-        return HttpResponse(zodiacs[2])
-    if month == 7 and day <= 22 or month == 6 and day >= 21:
-        return HttpResponse(zodiacs[3])
-    if month == 8 and day <= 22 or month == 7 and day >= 23:
-        return HttpResponse(zodiacs[4])
-    if month == 9 and day <= 22 or month == 8 and day >= 23:
-        return HttpResponse(zodiacs[5])
-    if month == 10 and day <= 22 or month == 9 and day >= 23:
-        return HttpResponse(zodiacs[6])
-    if month == 11 and day <= 21 or month == 10 and day >= 23:
-        return HttpResponse(zodiacs[7])
-    if month == 12 and day <= 21 or month == 11 and day >= 22:
-        return HttpResponse(zodiacs[8])
+    try:
+        if month == 1 and day <= 19 or month == 12 and day >= 22:
+            return HttpResponse(zodiacs[9])
+        if month == 2 and day <= 18 or month == 1 and day >= 20:
+            return HttpResponse(zodiacs[10])
+        if month == 3 and day <= 20 or month == 2 and day >= 19:
+            return HttpResponse(zodiacs[11])
+        if month == 4 and day <= 19 or month == 3 and day >= 21:
+            return HttpResponse(zodiacs[0])
+        if month == 5 and day <= 20 or month == 4 and day >= 20:
+            return HttpResponse(zodiacs[1])
+        if month == 6 and day <= 20 or month == 5 and day >= 21:
+            return HttpResponse(zodiacs[2])
+        if month == 7 and day <= 22 or month == 6 and day >= 21:
+            return HttpResponse(zodiacs[3])
+        if month == 8 and day <= 22 or month == 7 and day >= 23:
+            return HttpResponse(zodiacs[4])
+        if month == 9 and day <= 22 or month == 8 and day >= 23:
+            return HttpResponse(zodiacs[5])
+        if month == 10 and day <= 22 or month == 9 and day >= 23:
+            return HttpResponse(zodiacs[6])
+        if month == 11 and day <= 21 or month == 10 and day >= 23:
+            return HttpResponse(zodiacs[7])
+        if month == 12 and day <= 21 or month == 11 and day >= 22:
+            return HttpResponse(zodiacs[8])
+    except ValueError:
+        return HttpResponse('неверно')

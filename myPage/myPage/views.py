@@ -1,14 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
+
+# ----------------------- Главная страница --------------------------------
 
 url_list = [
     "admin/",
-    "horoscope/",
-    "week_days/",
-    "calc/"
+    "Гороскоп", # "horoscope/",
+    "Ежедневник", # "week_days/",
+    "Калькулятор", #"calc/",
+    "Типы_стихий", #"type/"
+    "Площадь_фигур", # geometry2/
 ]
 
+# ----------------------- вывод в виде списка на главной странице --------------------------------
 def index(request):
     li_urls = ''
     for x in url_list:

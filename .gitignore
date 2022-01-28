@@ -10,7 +10,6 @@
 /myPage/horoscope/tests.py
 /myPage/myPage/__init__.py
 /myPage/myPage/asgi.py
-/myPage/myPage/settings.py
 /myPage/myPage/wsgi.py
 /myPage/db.sqlite3
 /myPage/manage.py
