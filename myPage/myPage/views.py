@@ -3,14 +3,14 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from django.template.loader import render_to_string
 
-# ----------------------- Главная страница --------------------------------
+# ----------------------- Самая ПЕРВАЯ Главная страница --------------------------------
 
 url_list = [
-    "admin/",
+    "Admin",
     "Гороскоп", # "horoscope/",
-    "Ежедневник", # "week_days/",
+    "Ежедневник", # "geometry/",
     "Калькулятор", #"calc/",
-    "Типы_стихий", #"type/"
+    # "Типы_стихий", #"type/"
     "Площадь_фигур", # geometry2/
 ]
 

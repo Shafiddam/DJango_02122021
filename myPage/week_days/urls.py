@@ -3,7 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    path('<week_days>/', views.get_info_about_week_days),
+    # path('<geometry>/', views.get_info_about_week_days),
+    path('', views.get_info_about_week_days),
     # path('monday/', views.monday),
     # path('tuesday/', views.tuesday),
 

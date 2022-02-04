@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-url1 = 'admin/'
+url1 = 'Admin'
 url2 = 'Гороскоп/'
 url3 = 'Ежедневник/'
 url4 = 'Калькулятор/'

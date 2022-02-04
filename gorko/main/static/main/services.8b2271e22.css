@@ -1,0 +1,502 @@
+
+/*
+ * carCard.css
+ */
+[class|="carCard"] {margin:0 0 30px 14px}
+.carCard_head{padding:0 0 4px 6px}
+.carCard_head .fav{display:inline-block;vertical-align:middle;top:-1px}
+.carCard_name{font-size:18px;margin-left:12px}
+.carCard_body{position:relative;background-color:#F7F7F7;border-radius:5px;padding:5px 6px;min-height:180px}
+.carCard-top .carCard_body{background-color:#fffbeb}
+[class|="carCard_freeDate"] {color:#FFF;position:absolute;right:0;top:-17px;font-size:12px;height:17px;line-height:15px;font-weight:600;padding:0 6px;border-radius:3px 3px 0 0;background-color:#00CD7D}
+.carCard_freeDate-presumably{background-color:#d3c702}
+.carCard_covers{display:flex;
+    -webkit-justify-content:flex-start;justify-content:flex-start}
+.carCard_cover{overflow:hidden;position:relative;display:block;max-width:300px}
+.carCard_cover:first-child{margin-right:5px;border-radius:5px 0 0 5px}
+.carCard_cover:last-child{border-radius:0 5px 5px 0}
+.carCard_img{display:block;position:relative;left:50%;
+    -webkit-transform:translateX(-50%);
+        -ms-transform:translateX(-50%);transform:translateX(-50%)}
+.carCard_prices{position:absolute;top:5px;right:6px;width:156px}
+.carCard_price{font-weight:600;font-size:18px;margin-top:13px}
+.carCard_price .hint-icon{margin-left:4px;top:-1px}
+.carCard_price .hint_bubble{width:280px}
+.carCard_min{font-size:15px;font-weight:400;color:#666;margin:4px 0}
+.carCard_rateTime{color:#999;font-size:13px;margin-left:4px;font-weight:400}
+.carCard_driver{color:#666;margin-top:13px;font-size:15px}
+.carCard_params{position:absolute;bottom:13px;right:6px;width:156px;display:flex;
+    -webkit-flex-wrap:wrap;flex-wrap:wrap;
+    -webkit-flex-direction:row;flex-direction:row}
+[class|="carCard_param"] {position:relative;width:74px;margin-bottom:8px;font-size:14px;padding-left:22px;
+    -webkit-box-sizing:border-box;box-sizing:border-box}
+[class|="carCard_param"]::before{content:"";position:absolute;background-image:url(/i/svg/props-gray.svg);background-repeat:no-repeat;width:10px;height:10px;left:0;top:50%;
+    -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);transform:translateY(-50%)}
+.carCard_param-length::before{background-position:-28px 0;width:16px;height:8px}
+.carCard_param-capacity::before{background-position:-45px 0;width:14px;height:12px}
+.carCard_param-time::before{background-position:0 0;width:11px;height:11px;left:2px}
+.carCard_param-year::before{background-position:-12px 0;width:15px;height:12px}
+
+/*
+ * carRent.css
+ */
+.carRent{width:840px;border-top:1px solid #e6e6e6;background-color:#ffffff;overflow-y:hidden;transition:background-color 0.3s linear}
+.carRent:not(._expanded) {background-color:#F8F8F8}
+.carRent_caption{display:block;min-height:75px;position:relative;box-sizing:border-box;padding:27px 140px 20px 21px}
+.carRent_caption::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;z-index:2}
+.carRent_dateName{font-size:20px}
+.carRent._expanded .carRent_dateName{color:black}
+.carRent_name{font-size:14px;color:#666;margin-left:10px}
+.carRent_togger{position:absolute;font-size:14px;right:32px;top:50%;color:#666;padding-right:22px;
+    -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);transform:translateY(-50%)}
+.carRent_togger::before{content:"";position:absolute;right:0;top:50%;border-color:#CCC;border-style:solid;border-width:0 2px 2px 0;margin-top:-6px;width:8px;height:8px;
+    -webkit-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);transform:rotate(45deg)}
+.carRent._expanded .carRent_togger::before{border-width:2px 0 0 2px;margin-top:-1px}
+.carRent_togger::after{content:attr(text-expand)}
+.carRent._expanded .carRent_togger::after{content:attr(text-collapse)}
+.carRent_prices{margin-left:141px;text-align:left;overflow-x:auto;font-size:14px;margin-bottom:40px;opacity:1;max-height:600px;transition:opacity 0.3s linear, max-height 0.3s linear}
+.carRent_table{min-width:100%}
+.carRent:not(._expanded) .carRent_prices{opacity:0;pointer-events:none;max-height:0;margin-bottom:0;margin-top:0}
+[class|="carRent_row"] {border-top:1px solid white;
+}
+[class|="carRent_cell"], .carRent_cell{height:40px;padding:12px 20px 0 20px;box-sizing:border-box;font-weight:400;vertical-align:top;white-space:nowrap;border-right:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6}
+[class|="carRent_cell"]._cur, .carRent_cell._cur{background-color:#f3f9eb}
+.carRent_cell-join, .carRent_cell:last-child{border-right:0 none}
+.carRent_cell-join{padding-right:10px}
+.carRent_cell-join + .carRent_cell{padding-left:10px}
+.carRent_cell:first-child{
+    position:absolute;width:142px;left:0;line-height:34px;padding:0 0 0px 21px}
+.carRent_header{color:#999;font-size:12px;line-height:14px;vertical-align:middle;display:inline-block;white-space:normal}
+.carRent_row-day .carRent_cell:not(:first-child) {font-weight:600}
+.carRent_row-cost [class|="carRent_cell"],
+.carRent_row-cost .carRent_cell{height:70px}
+.carRent_row-cost [class|="carRent_cell"]:not(:first-child),
+.carRent_row-cost .carRent_cell:not(:first-child) {padding-top:17px;font-size:12px;color:#666}
+.carRent_cost{font-weight:600;font-size:16px;display:block;color:black;margin-bottom:4px}
+.carRent_row-cost .carRent_cell:first-child{line-height:66px}
+.carRent_row-min [class|="carRent_cell"],
+.carRent_row-min .carRent_cell{border-bottom:0 none;height:50px;padding-top:20px}
+.carRent_row-min .carRent_cell:first-child{line-height:50px;padding-top:0}
+
+/*
+ * cardGallery.css
+ */
+.cardGallery{font-size:0}
+.cardGallery_media{display:inline-block}
+.cardGallery_media:not(:first-child) {margin-left:20px}
+
+/*
+ * carrentalCard.css
+ */
+[class|="carrentalCard"] {padding:13px 5px 5px;margin:20px 8px 30px 0;position:relative}
+.carrentalCard-top{background-color:#FFFBEB;border-radius:5px}
+.carrentalCard_head{position:relative;padding-left:56px;margin-bottom:13px;min-height:36px;display:flex;
+    -webkit-flex-direction:column;flex-direction:column;
+    -webkit-justify-content:center;justify-content:center}
+.carrentalCard_head .fav{position:absolute;top:2px;left:10px}
+.carrentalCard_name{font-size:18px}
+.carrentalCard_cars{display:flex;font-size:0;
+    -webkit-flex-direction:row;flex-direction:row}
+.carrentalCard_car{margin-left:5px}
+.carrentalCard_car:first-child{margin-left:0}
+.carrentalCard_car:first-child .carrentalCard_cover{border-radius:10px 0 0 10px}
+.carrentalCard_car:last-child .carrentalCard_cover{border-radius:0 10px 10px 0}
+.carrentalCard_bottom{position:absolute;bottom:5px;left:5px;right:5px;text-align:right;padding:12px 20px 12px 0;background-color:rgba(0,0,0, 0.5);border-radius:0 0 10px 10px}
+.carrentalCard_allCars{color:#FFF;font-size:15px}
+/*
+ * catalog.css
+ */
+.catalog_shops .pVendors_bread{margin:20px 0 0 13px}
+.catalog_shops .catalog_list{margin-top:30px}
+.catalog_shops .directory_header{margin-bottom:0}
+.catalog_shops .services_map{margin-top:0}
+.catalog_shops .dressCards{margin:0 0 0 3px}
+.catalog_shops._map [class|="shopCard"]::before,
+.catalog_shops._map .shopCard::before{content:attr(data-number);position:absolute;background-color:#e42b72;width:25px;height:25px;top:-12px;left:-12px;font-size:14px;border-radius:18px;color:#fff;text-align:center;line-height:24px}
+.catalog_favSwitchers{background-color:#F8F8F8;font-size:14px;color:#666;margin:13px 0 18px 13px;padding:17px 20px 18px;border-radius:5px}
+.catalog_favSwitcher{font-size:15px;font-weight:600;margin-left:15px}
+.catalog_favSwitcher:first-child{margin-left:24px}
+.catalog_favSwitcher._cur{color:#E50064}
+
+/*
+ * dressCard.css
+ */
+.dressCards{font-size:0;margin:0 -10px;opacity:0}
+.dressCards._columnized{opacity:1;display:flex;
+    -webkit-flex-direction:row;flex-direction:row;
+    -webkit-justify-content:flex-start;justify-content:flex-start}
+.dressCards_column{display:flex;
+    -webkit-flex-direction:column;flex-direction:column}
+.dressCards_column ~ [class|="dressCard"],
+.dressCards_column ~ .dressCard{position:absolute;opacity:0}
+[class|="dressCard"] {position:relative;width:252px;display:inline-block;box-shadow:0 0 10px 0 rgba(0,0,0, 0.15);vertical-align:top;margin:12px 10px;background-color:#fff}
+.dressCard-top{background-color:#FFFBEB}
+[class|="dressCard"] .fav{position:absolute;top:10px;left:10px;visibility:hidden}
+[class|="dressCard"] .fav[fav-value="1"],
+[class|="dressCard"]:hover .fav{visibility:visible}
+.dressCard_media{display:block}
+.dressCard_info{position:relative;padding:11px 15px 8px}
+.dressCard_price{font-size:18px;margin:0}
+.dressCard_salons{color:#878787;font-size:13px;margin-left:2px}
+.dressCard_instock{font-size:13px;color:#878787}
+.dressCard_name{font-size:12px;color:#878787;line-height:15px;margin:6px 0}
+.dressCard_description{position:absolute;bottom:100%;right:0;left:0;background-color:rgba(0,0,0, 0.5);color:#FFF;font-size:13px;line-height:15px;padding:9px 15px 11px;visibility:hidden}
+[class|="dressCard"]:hover .dressCard_description{visibility:visible}
+
+/*
+ * dressSalon.css
+ */
+.dressSalon{display:flex;padding:20px;
+    -webkit-align-items:center;align-items:center}
+.dressSalon:nth-child(even) {background-color:#F8F8F8}
+.dressSalon_name{font-size:16px;margin-right:20px;line-height:21px;width:260px}
+.dressSalon_contacts{width:285px}
+.dressSalon_price{width:114px;font-size:18px}
+.dressSalon_request{font-size:14px}
+
+/*
+ * gift.css
+ */
+.gift{display:inline-block;position:relative;color:#000;font-size:13px;padding:2px 12px 8px 13px;border-radius:5px;background-color:#FFF7E6}
+.gift::before{content:"";width:17px;height:21px;display:inline-block;margin:0 7px -5px 0;background:url(/i/svg/gift/orange.svg) 0 0/17px 21px no-repeat}
+.gift::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0;z-index:2}
+
+/*
+ * pCar.css
+ */
+
+.pCar_price{font-size:20px;margin:10px 0 20px}
+.pCar_price:first-of-type:last-of-type{font-size:37px;margin:5px 0 15px 2px;font-weight:200;padding:0}
+.pCar_rate{font-size:16px;color:#aaa;margin-left:10px}
+.pCar_min{font-size:15px;margin:6px 0}
+.pCar_request{font-size:13px;font-weight:600}
+.pCar_rents{margin-top:40px;position:relative}
+.pCar_footer{height:90px;line-height:90px;text-align:center;color:black;margin-top:40px;border-radius:10px;background-color:#F8F8F8}
+.pCar .pItem_stage{height:354px;width:531px}
+
+/*
+ * pCarrental.css
+ */
+.pCarrental .directory_more{margin-left:0;margin-top:30px;padding-top:23px}
+.pCarrental [class|="carCard"] {margin-left:0}
+.pCarrental .carCard_cover{max-width:278px}
+
+/*
+ * pDress.css
+ */
+.pDress_bestOffer{color:#999;margin:-4px 2px 20px;font-size:12px}
+.pDress_toSalons{background-color:#F8F8F8;padding:11px 20px;margin:25px -18px -20px;border-radius:0 0 3px 3px;font-size:13px}
+.pDress .pItem_stage{width:480px;height:720px}
+.pDress .pItem_thumbs{max-height:720px}
+.pDress_salons .pItem_caption{margin-bottom:18px}
+
+/*
+ * pItem.css
+ */
+.pItem{margin-top:14px}
+.pItem .breadcrumbs{margin:0 0 0 2px}
+.pItem_title{margin:30px 0 37px;padding-left:46px;position:relative}
+.pItem_fav{position:absolute;left:0;top:3px}
+.pItem_caption{font-size:22px;font-weight:400;margin:30px 0 32px 20px}
+.pItem_info{width:260px;vertical-align:top;display:inline-block}
+.pItem_owner{border:1px solid #E6E6E6;border-radius:4px;padding:13px 18px 20px}
+.pItem_price{font-size:37px;margin:5px 0 15px 2px;font-weight:200}
+.pItem_date{margin:4px 0 20px 2px;font-size:18px}
+.pItem_owner_name{font-size:16px;margin:6px 0 7px 2px}
+.pItem_params{margin:28px 0 0 21px}
+.pItem_param{position:relative;padding-left:112px;font-size:15px;margin:13px 0}
+.pItem_param_name{position:absolute;width:108px;color:#999;left:0}
+.pItem_description{font-size:15px;line-height:21px;margin:31px 0 0 20px;word-wrap:break-word;overflow:hidden;max-height:253px}
+[class|="pItem_gallery"] {font-size:0;width:550px;display:inline-block;vertical-align:top;margin-left:23px}
+.pItem_gallery-vertical{width:auto}
+.pItem_stage{overflow:hidden;position:relative;margin-left:7px;display:flex;
+    -webkit-justify-content:center;justify-content:center;
+    -webkit-align-items:center;align-items:center}
+.pItem_gallery-vertical .pItem_stage{vertical-align:top;display:inline-block}
+.pItem_media{max-width:100%;max-height:100%}
+.pItem_media:not(._cur) {position:absolute;left:100vw;opacity:0}
+.pItem_thumbs{white-space:nowrap;overflow:auto;padding-bottom:10px;margin:15px 0 0 7px;width:531px}
+.pItem_gallery-vertical .pItem_thumbs{width:60px;display:inline-block;vertical-align:top;margin-top:0}
+[class|="pItem_thumb"], .pItem_thumb{cursor:pointer;margin:0 7px}
+[class|="pItem_thumb"]:first-child,
+.pItem_thumb:first-child{margin-left:0}
+[class|="pItem_thumb"]:last-child,
+.pItem_thumb:last-child{margin-right:0}
+.pItem_gallery-vertical [class|="pItem_thumb"],
+.pItem_gallery-vertical .pItem_thumb{margin:10px 0;display:block}
+.pItem_gallery-vertical [class|="pItem_thumb"]:first-child,
+.pItem_gallery-vertical .pItem_thumb:first-child{margin-top:0}
+.pItem_gallery-vertical [class|="pItem_thumb"]:last-child,
+.pItem_gallery-vertical .pItem_thumb:last-child{margin-bottom:0}
+.pItem_thumb._cur{opacity:0.3}
+.pItem_thumb-video{position:relative;display:inline-block}
+.pItem_thumb-video::before{content:attr(duration-text);position:absolute;bottom:2px;right:2px;padding:2px 4px;color:#FFF;font-size:12px;background-color:rgba(90,120,120, 0.8)}
+.pItem_thumb-video::after{content:"";position:absolute;left:0;top:0;height:100%;width:100%;z-index:2;background:url(/i/svg/triangle-white.svg) 43px center no-repeat, radial-gradient(circle, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 18px, rgba(255,255,255,1) 19px, rgba(255,255,255,1) 19px, rgba(255,255,255,0) 20px)}
+.pItem_shares{margin:42px 0 0 290px;font-size:13px}
+[class|="pItem_share"] {color:white;border-radius:12px;padding:0 10px;margin:0 3px;display:inline-block;height:22px;line-height:21px}
+[class|="pItem_share"]:first-child{margin-left:11px}
+.pItem_share-vk{background-color:#4A74A4}
+.pItem_share-tw{background-color:#00ABE6}
+.pItem_share-fb{background-color:#3B589E}
+.pItem_share-gplus{background-color:#DD5044}
+.pItem_text{vertical-align:middle;font-size:15px;line-height:18px}
+.pItem_cache{position:fixed;top:0;left:100%;opacity:0}
+
+/*
+ * pVendors.css
+ */
+.pVendors_bread{background-color:#f8f8f8;border-radius:4px;color:#666;padding:15px 22px 19px}
+.pVendors_bread .bread{font-size:15px;position:relative;padding-left:20px}
+.pVendors_bread .bread::before{content:"";position:absolute;left:0;top:50%;display:inline-block;width:6px;height:6px;border-width:0 0 2px 2px;border-style:solid;
+    -webkit-transform:rotate(45deg) translateY(-50%);
+        -ms-transform:rotate(45deg) translateY(-50%);transform:rotate(45deg) translateY(-50%)}
+.pVendors_list{margin:32px 0 0}
+
+/*
+ * pVenue.css
+ */
+.pVenue .sideInfo_type{margin-top:6px}
+.pVenue .gift{margin-top:17px;display:block;padding-right:0;white-space:nowrap}
+
+/*
+ * places.css
+ */
+.places_edit{border:2px dashed #dce9f1;color:#2e2e2e;font-size:14px;padding:17px 18px 16px 18px;margin:15px 0 0 13px;border-radius:8px;text-align:center}
+.places_edit_button{font-size:18px;position:relative;margin-left:26px}
+.places_edit_button:before{content:"";position:absolute;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAYAAAC9+TVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAxhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDM0MiwgMjAxMC8wMS8xMC0xODowNjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4RDZFNTUzOEYzNzYxMUUxODI4OUUyMUExNkNEMTIwMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4RDZFNTUzOUYzNzYxMUUxODI4OUUyMUExNkNEMTIwMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhENkU1NTM2RjM3NjExRTE4Mjg5RTIxQTE2Q0QxMjAzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhENkU1NTM3RjM3NjExRTE4Mjg5RTIxQTE2Q0QxMjAzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+UxPAygAAAQlJREFUeNqsVDsOwjAMTaOO2ekB2NsddjhA924sHICJiYkDcIDuMLGEnQOke9jL3gNgS6ayghNA8KTXRv08O892MrW6qQSmQAPsiSJy4VkFXADnwfMBaIGXUDBjmWDEBrhUaaBYS4IvmWwoi3fAYGtaWy7SRAS2dJ8JGaKQR2q4FMA6EtUR75H3GFxpwcBvgNkXuJ0yMM1HzHTBz2MbhCX2zAcOy6sBOLN1odUfkAsduhOqs6QKSehRpGN7NJFSm0QPOdzO9YedoE+DpjloIx/VxDJSsRP35AicCF3ZJLJon4PIjT2Qev3BAO553+SCekdHQUWGjlWgY8CSUPI8cSyKodnyqdQeAgwAxOE3EnakVbQAAAAASUVORK5CYII=");left:-28px;top:50%;margin-top:-8px;height:18px;width:17px}
+.places_edit._edit .places_edit_button,
+.places_edit:not(._edit) .placesEdit{display:none}
+
+/*
+ * placesEdit.css
+ */
+.placesEdit{text-align:left}
+.placesEdit .form_phone_block{margin-left:150px}
+.placesEdit .servicesMap{margin-left:8px}
+.placesEdit_address._search:after{content:"";position:absolute;right:76px;top:0;bottom:0;width:28px;background:url(/i/loading_28.gif) 0 center no-repeat}
+
+/*
+ * ppCar.css
+ */
+.ppCar{margin:12px -9px 0}
+.ppCar .pItem_title{margin-top:0}
+.ppCar .pCar_footer{border-radius:0 0 10px 10px;margin:40px -30px -39px}
+
+/*
+ * ppCarRequest.css
+ */
+.ppCarRequest .ppRequest_info{width:300px}
+.ppCarRequest .ppRequest_form{margin-left:350px}
+/*
+ * ppDress.css
+ */
+.ppDress{margin:12px -9px 0}
+.ppDress .pItem_title{margin-top:0}
+/*
+ * ppDressRequest.css
+ */
+.ppDressRequest .ppRequest_caption{margin-bottom:36px}
+.ppDressRequest .ppRequest_info{width:200px;padding-top:2px}
+.ppDressRequest .ppRequest_form{margin-left:250px}
+.ppDressRequest .ppRequest_name{font-size:20px;line-height:24px}
+.ppDressRequest .ppRequest_field-area{margin-bottom:17px}
+.ppDressRequest_caption{font-size:15px;margin-bottom:18px}
+.ppDressRequest_sizes{margin-bottom:23px}
+.ppDressRequest_size{width:80px;margin:5px 0}
+.ppDressRequest_size .switcher_icon{}
+.ppDressRequest_salons{background-color:#f8f8f8;border-radius:10px;padding:20px 21px;margin-bottom:36px}
+.ppDressRequest_salons .ppDressRequest_caption{margin-bottom:23px}
+.ppDressRequest_salon{display:flex;margin:10px 0}
+.ppDressRequest_salons:not(._expanded) .ppDressRequest_salon:nth-of-type(n+4) {display:none}
+.ppDressRequest_salon .switcher_text{margin-left:10px;vertical-align:top;width:10px;flex-grow:1;padding-top:3px}
+.ppDressRequest_more{margin:16px 0 4px -1px}
+.ppDressRequest_salons._expanded .ppDressRequest_more{display:none}
+
+/*
+ * ppGift.css
+ */
+.ppGift{padding-top:20px;text-align:center}
+.ppGift_text{font-size:18px;line-height:24px;margin:10px 20px 16px}
+.ppGift_notice{color:#666;font-size:16px;margin:10px 80px 32px;line-height:22px}
+.ppGift_howTo{color:#fff;background-color:#FFB30F;font-size:24px;padding:16px 0 24px;margin:20px -39px}
+.ppGift_steps{counter-reset:stepsCounter;text-align:left;font-size:18px;margin:56px 0 44px}
+.ppGift_step{margin:28px 0;line-height:22px;padding-left:46px;list-style:none;position:relative;counter-increment:stepsCounter}
+.ppGift_step::before{content:counter(stepsCounter) '.';font-size:24px;position:absolute;left:0;top:-3px;width:30px;text-align:right;font-weight:600}
+.ppGift .gift{padding-bottom:4px;margin-left:4px}
+
+/*
+ * ppRequest.css
+ */
+.ppRequest{margin:2px 0 0 31px;text-align:center}
+.ppRequest .switcher_text{margin-left:10px}
+.ppRequest_caption{margin-bottom:44px}
+.ppRequest_info{float:left;text-align:left}
+.ppRequest_photo{display:block;max-width:100%}
+.ppRequest_name{font-size:22px;font-weight:300;margin:16px 0 10px}
+.ppRequest_company{font-size:15px;font-weight:400}
+.ppRequest_form{text-align:left}
+[class|="ppRequest_field"] {display:inline-block;width:100%;padding-left:12px;box-sizing:border-box}
+.ppRequest_field-date{position:relative;background-color:#F8F8F8;height:35px;line-height:34px;margin-bottom:10px;font-size:14px}
+.ppRequest_date_text{font-size:15px;font-weight:600;margin-left:4px}
+.ppRequest_date_text:empty{display:none}
+.ppRequest_date_select{margin-left:4px}
+.ppRequest_field-text{height:35px;margin:10px 0}
+.ppRequest_field-area{padding-top:5px;padding-bottom:5px;margin:10px 0 37px}
+.ppRequest_field-checkbox{padding-left:35px;margin:5px 0}
+.ppRequest_field-checkbox .switcher{margin-left:-35px}
+.ppRequest_ffText{color:#999;font-size:15px;margin-top:30px}
+.ppRequest_ffText:empty{margin-top:10px}
+.ppRequest_send{display:inline-block;position:relative;margin-top:16px}
+.ppRequest_cancel{position:absolute;left:100%;font-size:13px;color:#A3A3A3;top:12px;margin-left:8px;word-spacing:5px;white-space:nowrap}
+/*
+ * roomCard.css
+ */
+[class|="roomCard"] {display:inline-block;width:310px;min-height:310px;border:1px solid #d9d9d9;box-shadow:0 1px 8px 0 rgba(0,0,0, 0.25);border-radius:7px;margin:0 9px;background-color:#fff;vertical-align:top;text-align:left;white-space:normal;position:relative}
+.roomCard-notavailable{opacity:0.4}
+.roomCard_link{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1}
+.roomCard_media{position:relative;border-radius:6px 6px 0 0;display:block;overflow:hidden}
+.roomCard_media[status-text]::before{content:attr(status-text);position:absolute;background-color:#359300;color:#fff;font-size:12px;top:10px;left:0;font-weight:600;padding:4px 16px}
+.roomCard_media[status-text][status-busy="1"]::before{background-color:#f4cb15}
+.roomCard_media[status-text][status-busy="2"]::before{background-color:#f4cb15}
+.roomCard_media[status-text][status-busy="3"]::before{background-color:#CB0000}
+.roomCard_name{position:relative;background-color:#F5F5F5;height:40px;font-size:13px;font-weight:600;line-height:39px;overflow:hidden;padding-left:20px;padding-right:42px}
+.roomCard_panorama{position:absolute;right:10px;top:4px;width:40px;height:34px;background:url(/i/svg/krpano/3d-orange.svg) center/20px 17px no-repeat;z-index:2}
+.roomCard_props{padding:1px 0 10px}
+.roomCard_prop{position:relative;color:#808080;font-weight:600;font-size:13px;padding:7px 20px 9px 20px;border-top:1px solid #E8E8E8;box-sizing:border-box;display:flex;justify-content:space-between}
+.roomCard_prop:first-of-type{border-top:0 none}
+.roomCard_prop_name{white-space:nowrap;min-width:90px}
+.roomCard_prop_value{color:#000;text-align:right;margin-left:6px}
+.roomCard_props_wrapper{width:400px}
+.roomCard_props_wrapper .roomCard_prop_value{margin-left:10px}
+
+/*
+ * servicesFavs.css
+ */
+.servicesFavs{font-size:14px;font-style:italic;position:relative;margin:24px 0 0 11px;padding:0 0 0 26px}
+.servicesFavs:before{content:"";background-image:url(/i/icon.png);background-repeat:no-repeat;background-position:-24px -1440px;width:24px;height:24px;position:absolute;left:0;top:1px}
+.servicesFavs[data-count="0"]:before{background-position:-48px -1440px}
+[class|="servicesFavs_text"] {line-height:15px}
+.servicesFavs_text-has{color:#ff184d !important}
+.servicesFavs_text-empty{color:#666666}
+.servicesFavs[data-count="0"] .servicesFavs_text-has,
+.servicesFavs:not([data-count="0"]) .servicesFavs_text-empty{display:none}
+
+/*
+ * servicesMap.css
+ */
+.servicesMap{border:4px solid #57a822;height:360px;margin-top:8px}
+.servicesMap_balloon{position:relative;margin-top:-38px;background-color:white;width:150px;padding:10px;text-align:center;border-width:1px;border-style:solid;border-color:#cccccc;border-radius:8px 8px 8px 0}
+.servicesMap_balloon:before{content:"";position:absolute;background-color:inherit;border-style:inherit;border-color:inherit;border-width:0 0 1px 1px;width:40px;height:36px;left:-1px;bottom:-19px;z-index:0;
+    -webkit-transform:skewY(-42deg);
+        -ms-transform:skewY(-42deg);transform:skewY(-42deg)}
+.servicesMap_name{position:relative;z-index:1;font-size:14px;line-height:17px;margin-top:3px}
+.servicesMap_icon{background-color:#323232;border-radius:3px 3px 3px 0;color:white;font-size:12px;font-weight:bold;padding:3px 5px;position:absolute;bottom:100%;margin-bottom:7px}
+.servicesMap_icon:before{content:"";left:0;bottom:-7px;border-color:#323232 transparent transparent;border-style:solid;border-width:7px 10px 0 0;position:absolute}
+.servicesMap_close{border:1px solid #707377;border-radius:2px;height:11px;position:absolute;right:-5px;top:-5px;width:11px;cursor:pointer;background:url(/i/svg/x/gray.svg) center center/7px no-repeat white}
+
+/*
+ * servicesMenu.css
+ */
+.servicesMenu{padding-top:20px}
+.servicesMenu_item{background:none;font-size:16px;margin:0;padding:1px 0 11px 11px;width:166px;word-wrap:break-word;box-sizing:border-box}
+.servicesMenu_item._cur{background-image:url('data:image/gif;base64,R0lGODlhDAAmALMAAPL3+efw9Pz9/uHs8vP4+t/r8fr8/fj6/Ozz9u7099vo79no7t3q8Nro7////9vp7yH5BAAAAAAALAAAAAAMACYAAARzEAlHq33Bavce2FVXGCD3NBnYnd+2NsOkrc+CuKvCHDON9r4WhdaByUzERSJEfOhIyOQtStPxmq8MtmPddmze0yDcSHgbBcF5uTVSuYoW9jckWpm+af0Vu+QeBEA1KX4nIzgsKieEPQU8Kg1CGwyMG3olEQA7');background-position:right 0;background-repeat:no-repeat;background-color:#dbe9ef;padding:10px 0 10px 11px;border-radius:6px 0 0 6px;
+    -webkit-background-size:12px 100%;
+        -ms-background-size:12px 100%;background-size:12px 100%}
+.servicesMenu_link{font-size:16px}
+.servicesMenu_item._cur .servicesMenu_link{font-weight:bold;color:black}
+
+/*
+ * shopCard.css
+ */
+[class|="shopCard"] {margin:20px -2px 30px 75px;font-size:0;position:relative;box-shadow:0 0 10px 0 rgba(0,0,0, 0.15);border-radius:5px;padding:11px 0 0 14px}
+.shopCard-top{background-color:#FFFBEC}
+[class|="shopCard"] .fav{position:absolute;top:10px;left:-62px}
+.shopCard_info{position:relative;display:inline-block;vertical-align:top;width:141px;height:264px}
+.shopCard_name{font-size:17px;margin-left:1px;line-height:19px}
+.shopCard_address{font-size:12px;color:#666;margin-top:8px;line-height:15px}
+.shopCard_logo{position:absolute;max-width:100px;max-height:100px;bottom:0;left:0}
+.shopCard_media{display:inline-block;margin:4px 5px 15px;vertical-align:top}
+.shopCard_footer{background-color:#F0FDFF;border-radius:0 0 5px 5px}
+
+/*
+ * userCard.css
+ */
+[class|="userCard"] {width:793px;background-color:#FFF;border:1px solid #d9d9d9;border-radius:6px;box-shadow:0 1px 8px 0 rgba(0,0,0, 0.15);margin:28px -2px 28px 13px}
+.userCard-pro [class|="avatar"],
+.userCard-pro .avatar{border-color:#ffb315}
+.userCard_head{position:relative;min-height:100px;padding:14px 50px 0 110px;box-sizing:border-box}
+.userCard_head .fav{position:absolute;top:14px;right:15px}
+.userCard_head [class|="avatar"],
+.userCard_head .avatar{position:absolute;top:10px;left:10px}
+.userCard_name{font-size:20px;font-weight:600}
+.userCard_company{font-size:14px;color:#888;margin:5px 0 8px}
+.userCard_reviews{font-size:15px;margin-top:8px}
+.userCard_reviews_link{font-weight:600}
+.userCard_medias{position:relative;height:220px;overflow:hidden;white-space:nowrap;margin:0 -1px 10px 0}
+.userCard_medias .sliderbox-h{left:25px;right:25px;height:8px;border:0 none;background-color:#ededed;border-radius:4px}
+.userCard_medias .slider_knob{width:140px;height:8px;top:0}
+[class|="userCard_media"] {position:relative;font-size:0;margin:0 5px}
+[class|="userCard_media"]:first-child{margin-left:0}
+[class|="userCard_media"]:last-child{margin-right:0}
+.userCard_media-video::before{content:attr(media-duration);position:absolute;bottom:2px;right:2px;padding:2px 4px;color:#FFF;font-size:12px;background-color:rgba(90,120,120, 0.8)}
+.userCard_media-video::after{content:"";position:absolute;left:6px;bottom:6px;z-index:2;opacity:0.5;background:url(/i/svg/triangle-white.svg) center no-repeat #000;border-radius:20px;border:1px solid #fff;width:34px;height:34px}
+.userCard_schedule{position:relative;background-color:#F1FEFF;padding-left:30px;font-size:16px;height:40px;line-height:39px;margin:10px 0}
+.userCard_weddate{position:relative;padding-left:25px;background:url(/i/svg/card_weddate.svg) 0 center no-repeat;margin-left:19px}
+[class|="userCard"] [class|="card_freedate"], .userCard [class|="card_freedate"] {margin:10px 0;font-weight:600}
+.userCard_prices{font-size:0;padding:0 0 10px 11px}
+.userCard_price{display:inline-block;width:230px;border-left:1px solid #E6E6E6;font-size:14px;font-weight:600;margin-right:10px;padding:0 0 2px 19px;vertical-align:top}
+.userCard_price:first-child{border-left:0 none}
+.userCard_price_title{color:#808080}
+.userCard_price_value{margin-top:10px}
+/*
+ * venueCard.css
+ */
+[class|="venueCard"], .venueCard{border-radius:7px;box-shadow:0 0 16px 0 rgba(0,0,0, 0.18);border:1px solid #CFCFCF;margin:34px 1px 48px 14px}
+.venueCard-top{border-color:#FCBA16}
+.venueCard_head{position:relative;padding:27px 80px 0 30px;margin-bottom:11px;display:flex}
+.venueCard_head .fav{position:absolute;right:14px;top:11px}
+.venueCard_name{font-size:22px;font-weight:600;line-height:23px;padding-right:15px}
+.venueCard_gift{flex-grow:1}
+.venueCard_gift .gift_link{position:relative;top:-3px;white-space:nowrap}
+.venueCard_address{position:relative;font-size:14px;color:#808080;padding:2px 0 4px 24px;margin:2px 0 2px 30px}
+.venueCard_address::before{content:"";position:absolute;width:13px;height:18px;background:url(/i/svg/map_pointer/gray.svg) 0 0/cover no-repeat;left:0;top:0}
+.venueCard_schedule{position:relative;background-color:#F1FEFF;padding:0 320px 0 30px;font-size:16px;height:60px;line-height:59px;margin:20px 0 14px}
+.venueCard_weddate{position:relative;padding-left:25px;background:url(/i/svg/card_weddate.svg) 0 center no-repeat;margin-left:14px}
+.venueCard_weddate._loading::before{content:"";position:absolute;right:-22px;top:2px;background:url(/i/loading_28.gif) 0 0/cover no-repeat;width:20px;height:20px}
+.venueCard_schedule_text{position:absolute;right:220px;width:110px;text-align:right;font-size:12px;line-height:12px;top:0;bottom:0;font-weight:600;color:#808080;display:flex;
+    -webkit-align-items:center;align-items:center}
+.venueCard_monthes{position:absolute;right:23px;height:22px;top:10px;display:flex;width:174px;
+    -webkit-justify-content:space-between;justify-content:space-between;
+    -webkit-align-items:flex-end;align-items:flex-end}
+.venueCard_month{position:relative;width:24px;min-height:1px;background-color:#B8EEF1;
+    -webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0}
+.venueCard_month::before{position:absolute;content:attr(month-name);color:#808080;font-size:11px;font-weight:600;text-align:center;line-height:11px;bottom:-15px;left:0;right:0}
+.venueCard_content{margin:10px 0 5px;padding:5px 10px;white-space:nowrap;font-size:0;overflow:hidden}
+.venueCard_content .sliderbox-h{height:8px;border:0 none;position:relative;margin:19px 15px 5px;background-color:#EDEDED;border-radius:4px}
+.venueCard_content .slider_knob{top:0;width:240px}
+.venueCard_content .slider_knob::before{content:"";position:absolute;top:-8px;bottom:-8px;left:0;right:0}
+.venueCard_media{margin:0 5px}
+.venueCard_media:first-child{margin-left:10px}
+.venueCard_media:last-child{margin-right:10px}
+.venueCard_description{line-height:17px;font-size:13px;font-weight:600;margin:10px 30px 17px}
+.venueCard_props{margin:10px 30px 27px}
+.venueCard_prop{font-size:13px;margin:7px 0;line-height:15px}
+.venueCard-oneRoom .roomCard_props{position:relative;background-color:#F7F7F7;padding:10px 20px}
+.venueCard-oneRoom .venueCard_content{margin-bottom:10px;padding:0}
+.venueCard-oneRoom .venueCard_media:first-child{margin-left:0}
+.venueCard-oneRoom .venueCard_media:last-child{margin-right:0}
+.venueCard-oneRoom .roomCard_panorama{right:20px;top:18px;background-size:30px auto}
+.venueCard-oneRoom .sliderbox-h{margin:10px 25px 0}
+/*
+ * venuespec.css
+ */
+.venuespecs{margin:40px 0 30px}
+.venuespecs_switchers{margin:0 -4px 10px}
+.venuespecs_switchers .pCard_caption{margin-bottom:26px}
+.venuespecs_switcher{padding:8px 20px;font-size:14px;min-width:100px;margin:0 4px 12px;white-space:nowrap;display:inline-block;box-shadow:0 0 5px 0 rgba(0,0,0,0.2);border-radius:20px;box-sizing:border-box;font-weight:600;color:#000;background-color:#fff;text-align:center}
+.venuespecs_switcher._cur{background-color:#E50064;color:#fff}
+.venuespecs_texts{margin:10px 0 20px}
+.venuespec_text{line-height:19px;font-size:16px;margin-top:0}

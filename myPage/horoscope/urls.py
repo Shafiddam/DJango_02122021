@@ -4,7 +4,8 @@ from . import views
 #                                ________________horoscope_urls___________________
 urlpatterns = [
     path('', views.index),
-    path('Типы_стихий/', views.type),
+    # path('Типы_стихий/', views.type),
+    path('Типы_стихий/', views.type, name='type-name'),
     path('Типы_стихий/Огонь', views.type_Fire),
     path('Типы_стихий/Земля', views.type_Earth),
     path('Типы_стихий/Воздух', views.type_Air),

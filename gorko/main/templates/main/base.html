@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+<!--_________________Перенес CSS-стили из инета в локальную папку static(по умолчанию) приложения main_________________-->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn2.gorko.ru/g/main.8b2271e22.css"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'main/main.8b2271e22.css' %}"/>-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/2.css' %}"/>
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn2.gorko.ru/future/reg/assets/font.v082.css"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'main/font.v082.css' %}"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="https://cdn2.gorko.ru/g/services.8b2271e22.css"/>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'main/services.8b2271e22.css' %}"/>-->
+</head>
+<body>
+
+<div id="menu" class="menu _selected">
+    <div class="menu_item">
+        <a href="\" class="menu_link">Мой сайт</a>
+    </div>
+
+    <div class="menu_item">
+        <a href="PyCharm" class="menu_link">PyCharm</a>
+    </div>
+
+     <div class="menu_item">
+        <a href="VS_Code" class="menu_link">VS Code</a>
+    </div>
+
+    <div class="menu_item">
+        <a href="" class="menu_link">Меню_3</a>
+    </div>
+    <div class="menu_item">
+        <a href="Панель администратора" class="menu_link">Панель администратора</a>
+    </div>
+</div>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
+
